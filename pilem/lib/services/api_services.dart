@@ -11,7 +11,7 @@ class ApiService {
   Future<List<Map<String, dynamic>>> getAllMovies() async {
     final response = await http.get(
       Uri.parse("$baseUrl/movie/now_playing?api_key=$apiKey"),
-    );
+    );dd
 
     final data = json.decode(response.body);
     return List<Map<String, dynamic>>.from(data['results']);
