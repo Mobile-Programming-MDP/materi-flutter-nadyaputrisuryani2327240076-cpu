@@ -11,10 +11,14 @@ class ApiService {
   Future<List<Map<String, dynamic>>> getAllMovies() async {
     final response = await http.get(
       Uri.parse("$baseUrl/movie/now_playing?api_key=$apiKey"),
-    );dd
+    );
 
-    final data = json.decode(response.body);
-    return List<Map<String, dynamic>>.from(data['results']);
+     if (response.statusCode == 200) {
+      final data = json.decode(response.body);
+      return List<Map<String, dynamic>>.from(data['results']);
+    } else {
+      throw Exception('Failed to load movies');
+    }
   }
 
   // 2. mengambil list movie yang sedang trending minggu ini
@@ -22,9 +26,12 @@ class ApiService {
     final response = await http.get(
       Uri.parse("$baseUrl/trending/movie/week?api_key=$apiKey"),
     );
-
-    final data = json.decode(response.body);
-    return List<Map<String, dynamic>>.from(data['results']);
+    if (response.statusCode == 200) {
+      final data = json.decode(response.body);
+      return List<Map<String, dynamic>>.from(data['results']);
+    } else {
+      throw Exception('Failed to load trending movies');
+    }
   }
 
   // 3. mengambil list popular movie
@@ -32,10 +39,14 @@ class ApiService {
     final response = await http.get(
       Uri.parse("$baseUrl/movie/popular?api_key=$apiKey"),
     );
-
-    final data = json.decode(response.body);
-    return List<Map<String, dynamic>>.from(data['results']);
+  if (response.statusCode == 200) {
+      final data = json.decode(response.body);
+      return List<Map<String, dynamic>>.from(data['results']);
+    } else {
+      throw Exception('Failed to load popular movies');
+    }
   }
+   
 
   // 4. mengambil list movie melalui pencarian
   Future<List<Map<String, dynamic>>> searchMovies(String query) async {
@@ -43,7 +54,11 @@ class ApiService {
       Uri.parse("$baseUrl/search/movie?api_key=$apiKey&query=$query"),
     );
 
-    final data = json.decode(response.body);
-    return List<Map<String, dynamic>>.from(data['results']);
+     if (response.statusCode == 200) {
+      final data = json.decode(response.body);
+      return List<Map<String, dynamic>>.from(data['results']);
+    } else {
+      throw Exception('Failed to search movies');
+    }
   }
 }
