@@ -11,7 +11,7 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  final ApiServices apiServices = ApiServices();
+  final ApiService apiServices = ApiService();
   final TextEditingController _searchController = TextEditingController();
   List<Movie> _searchResults = [];
 

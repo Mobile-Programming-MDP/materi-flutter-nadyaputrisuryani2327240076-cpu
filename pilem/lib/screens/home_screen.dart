@@ -11,7 +11,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final ApiServices apiServices = ApiServices();
+  final ApiService apiServices = ApiService();
 
   List<Movie> _allMovies = [];
   List<Movie> _trendingMovie = [];
