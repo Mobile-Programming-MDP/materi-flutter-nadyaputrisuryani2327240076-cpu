@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "711457422776",
+    "project_id": "cepuapp-35e84",
+    "storage_bucket": "cepuapp-35e84.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:711457422776:android:2e5f61ad664ed87f08634d",
+        "android_client_info": {
+          "package_name": "com.example.cepu_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_92M6Vs1M14R8mb8jBbPLqWt9F5gKOGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
