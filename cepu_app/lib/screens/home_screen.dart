@@ -40,6 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return 'https://ui-avatars.com/api/?name=$formattedName&color=FFFFFF&background=000000';
   }
 
+ // create function untuk menampilkan model button
   void _showCategoryFilter() async {
     final result = await showModalBottomSheet(
       context: context,
@@ -87,7 +88,6 @@ class _HomeScreenState extends State<HomeScreen> {
         );
       },
     );
-
     if (result != null) {
       setState(() {
         selectedCategory =
@@ -101,7 +101,6 @@ class _HomeScreenState extends State<HomeScreen> {
       });
     }
   }
-
   @override
   Widget build(BuildContext context) {
     final currentUserId = FirebaseAuth.instance.currentUser?.uid;

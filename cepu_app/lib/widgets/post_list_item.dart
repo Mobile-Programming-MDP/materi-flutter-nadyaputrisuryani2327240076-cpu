@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:cepu_app/models/post.dart';
 import 'package:cepu_app/screens/detail_screen.dart';
 import 'package:cepu_app/services/post_service.dart';
