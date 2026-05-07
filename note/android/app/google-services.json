@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "980670197654",
+    "project_id": "notes-38766",
+    "storage_bucket": "notes-38766.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980670197654:android:4e6745af99edfee78db7b7",
+        "android_client_info": {
+          "package_name": "com.example.notes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ418pD2xwchK6RRt5Rjsch09HpYEJ8fc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
